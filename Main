@@ -1,0 +1,3 @@
+if PlaceId == 294790062 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsLynX/LynX/main/RobloxTitanic"))()
+ end
