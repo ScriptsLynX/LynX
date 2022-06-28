@@ -21,6 +21,8 @@ elseif game.PlaceId == 4893679160 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsLynX/LynX/main/BigBrainSimulator"))()
  elseif game.PlaceId == 9555732501 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsLynX/LynX/main/NenFightingSimulator"))()
+ elseif game.PlaceId == 9772878203 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsLynX/LynX/main/RaiseaFloppa2"))()
 else
 notify("No script was found for this game!",5)
 end
