@@ -639,8 +639,8 @@ function Library:Window(titletext,MainColor)
 
                 TextButton.MouseButton1Down:Connect(function()
                     IsDown = true
-                    pcall(callback)
                     TweenService:Create(TextButton, TweenInfo.new(0.13, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = MainColor}):Play()
+                    pcall(callback)
                 end)
 
                 TextButton.MouseButton1Up:Connect(function()
