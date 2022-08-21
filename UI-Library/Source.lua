@@ -629,6 +629,7 @@ function Library:Window(titletext,MainColor)
                 TextButton.Size = UDim2.new(0, 222, 0, 17)
                 TextButton.AutoButtonColor = false
                 TextButton.Font = Enum.Font.GothamMedium
+                TextButton.Text = text
                 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
                 TextButton.TextSize = 18.000
                 TextButton.TextWrapped = true
