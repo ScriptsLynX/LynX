@@ -509,7 +509,7 @@ function Library:Window(titletext,MainColor)
                 ScrollingDropDown.Name = "ScrollingDropDown"
                 ScrollingDropDown.Parent = Dropdown
                 ScrollingDropDown.Active = true
-                ScrollingDropDown.CanvasSize = UDim2.new(5,0,0,0)
+                ScrollingDropDown.CanvasSize = UDim2.new(0,0,5,0)
                 ScrollingDropDown.AnchorPoint = Vector2.new(0.5, 0)
                 ScrollingDropDown.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
                 ScrollingDropDown.BorderSizePixel = 0
