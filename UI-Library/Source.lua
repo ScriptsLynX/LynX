@@ -576,7 +576,7 @@ function Library:Window(titletext,MainColor)
                     TextButton.Parent = ScrollingDropDown
                     TextButton.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
                     TextButton.BorderSizePixel = 0
-                    TextButton.Size = UDim2.new(1, 0, 0.100000001, 0)
+                    TextButton.Size = UDim2.new(1, 0, 0.04, 0)
                     TextButton.AutoButtonColor = false
                     TextButton.Font = Enum.Font.GothamMedium
                     TextButton.Text = v
