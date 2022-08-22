@@ -186,13 +186,13 @@ function Library:Window(titletext,MainColor)
     Title.BackgroundTransparency = 1.000
     Title.Text = titletext
     Title.Position = UDim2.new(0.01, 0, 0.5, 0)
-    Title.Size = UDim2.new(0,Title.TextBounds.X,0,27)
     Title.Font = Enum.Font.GothamBold
     Title.TextColor3 = MainColor
     Title.TextScaled = true
     Title.TextSize = 14
     Title.TextWrapped = true
     Title.TextXAlignment = Enum.TextXAlignment.Left
+    Title.Size = UDim2.new(0,Title.TextBounds.X,0,27)
 
     Title.MouseEnter:Connect(function()
         TweenService:Create(Title, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
