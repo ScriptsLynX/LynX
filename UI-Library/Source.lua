@@ -670,11 +670,11 @@ function Library:Window(titletext,MainColor)
 
                     TextButton.MouseButton1Down:Connect(function()
                         TweenService:Create(TextButton, TweenInfo.new(0.13, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = MainColor}):Play()
+                        Choosed.Text = v
+                        callback(v)
                     end)
     
                     TextButton.MouseButton1Up:Connect(function()
-                        Choosed.Text = v
-                        callback(v)
                         TweenService:Create(TextButton, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundColor3 = Color3.fromRGB(21, 21, 21)}):Play()
                     end)
 
