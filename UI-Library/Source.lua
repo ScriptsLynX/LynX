@@ -913,7 +913,7 @@ function Library:Window(titletext,MainColor)
 
 end
 
-function Library:Notify(title,notifytext,waiting)
+function Notify(title,notifytext,waiting)
 
     local LynXNotify = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
