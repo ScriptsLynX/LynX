@@ -8,6 +8,90 @@ local TweenService = game:GetService("TweenService")
 local pagecooldown = false
 local Library = {}
 
+function Library:Notify(title,notifytext,waiting)
+
+    local LynXNotify = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local NTitle = Instance.new("TextLabel")
+    local NText = Instance.new("TextLabel")
+    local UIGradient = Instance.new("UIGradient")
+    local Image = Instance.new("ImageLabel")
+
+    LynXNotify.Name = "LynXNotify"
+    LynXNotify.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    LynXNotify.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    Frame.Parent = LynXNotify
+    Frame.AnchorPoint = Vector2.new(0, 1)
+    Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Frame.BorderSizePixel = 0
+    Frame.Position = UDim2.new(0, 5, 1, -5)
+    Frame.Size = UDim2.new(0, 0, 0, 44)
+    Frame.ZIndex = 10
+
+    UICorner.CornerRadius = UDim.new(0, 3)
+    UICorner.Parent = Frame
+
+    NTitle.Name = "NTitle"
+    NTitle.Parent = Frame
+    NTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    NTitle.BackgroundTransparency = 1.000
+    NTitle.Position = UDim2.new(0, 24, 0, 5)
+    NTitle.Size = UDim2.new(0, 162, 0, 15)
+    NTitle.Font = Enum.Font.GothamBold
+    NTitle.Text = title
+    NTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    NTitle.TextScaled = true
+    NTitle.TextSize = 14.000
+    NTitle.TextWrapped = true
+    NTitle.TextTransparency = 1
+    NTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+    NText.Name = "NText"
+    NText.Parent = Frame
+    NText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    NText.BackgroundTransparency = 1.000
+    NText.Position = UDim2.new(0, 5, 0, 22)
+    NText.Size = UDim2.new(0, 209, 0, 15)
+    NText.Font = Enum.Font.GothamMedium
+    NText.Text = notifytext
+    NText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    NText.TextScaled = true
+    NText.TextSize = 14.000
+    NText.TextWrapped = true
+    NText.TextTransparency = 1
+    NText.TextXAlignment = Enum.TextXAlignment.Left
+
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(29, 29, 29)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(13, 13, 13))}
+    UIGradient.Rotation = 5
+    UIGradient.Parent = Frame
+
+    Image.Name = "Image"
+    Image.Parent = Frame
+    Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Image.BackgroundTransparency = 1.000
+    Image.Position = UDim2.new(0, 5, 0, 5)
+    Image.Size = UDim2.new(0, 15, 0, 15)
+    Image.Image = "rbxassetid://7072978559"
+    Image.ImageTransparency = 1
+
+    TweenService:Create(Frame, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Size = UDim2.new(0, 221, 0, 44)}):Play()
+    wait(0.3)
+    TweenService:Create(NTitle, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextTransparency = 0}):Play()
+    TweenService:Create(NText, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextTransparency = 0}):Play()
+    TweenService:Create(Image, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {ImageTransparency = 0}):Play()
+    wait(waiting)
+    TweenService:Create(NTitle, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+    TweenService:Create(NText, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+    TweenService:Create(Image, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 1}):Play()
+    wait(0.3)
+    TweenService:Create(Frame, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 44)}):Play()
+    wait(0.2)
+    LynXNotify:Destroy()
+end
+
+
 function Library:Window(titletext,MainColor)
     local LynXGui = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
@@ -908,7 +992,6 @@ function Library:Window(titletext,MainColor)
         return SectionX
 
     end
-
     
     return PageX
 
