@@ -180,6 +180,7 @@ function Library:Window(titletext,MainColor)
     Line.Size = UDim2.new(0, 500, 0, 2)
 
     Title.Name = "Title"
+    Title.Size = UDim2.new(0,200,0,27)
     Title.Parent = UpperFrame
     Title.AnchorPoint = Vector2.new(0, 0.5)
     Title.BackgroundColor3 = Color3.fromRGB(255, 66, 66)
