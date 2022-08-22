@@ -19,7 +19,7 @@ function Library:Notify(title,notifytext,waiting)
     local Image = Instance.new("ImageLabel")
 
     LynXNotify.Name = "LynXNotify"
-    LynXNotify.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    LynXNotify.Parent = game.CoreGui
     LynXNotify.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     Frame.Parent = LynXNotify
