@@ -186,7 +186,8 @@ function Library:Window(titletext,MainColor)
     Title.BackgroundTransparency = 1.000
     Title.Text = titletext
     Title.Position = UDim2.new(0.01, 0, 0.5, 0)
-    Title.Size = Title.TextBounds or UDim2.new(0, 141, 0, 27)
+    Title.Size = UDim2.new(0, 141, 0, 27)
+    Title.Size.X = Title.TextBounds.X
     Title.Font = Enum.Font.GothamBold
     Title.TextColor3 = MainColor
     Title.TextScaled = true
