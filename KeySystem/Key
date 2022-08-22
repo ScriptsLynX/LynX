@@ -1,6 +1,0 @@
-local key = {}
-
-KEY1 = "SUPEDRUPEDSES"
-getgenv().KEY2 = "DEGE"
-
-return key
