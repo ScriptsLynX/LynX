@@ -1,5 +1,6 @@
 local key = {}
 
-local KEY = "SUPEDRUPEDSES"
+KEY1 = "SUPEDRUPEDSES"
+getgenv().KEY2 = "DEGE"
 
 return key
