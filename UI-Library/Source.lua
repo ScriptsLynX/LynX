@@ -765,6 +765,7 @@ function Library:Window(titletext,MainColor)
                 Box.Text = ""
                 Box.TextColor3 = Color3.fromRGB(255, 255, 255)
                 Box.TextSize = 11.000
+                Box.TextWrapped = true
                 
                 UICorner_2.CornerRadius = UDim.new(0, 5)
                 UICorner_2.Parent = Box
