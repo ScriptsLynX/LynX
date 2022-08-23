@@ -17,7 +17,7 @@ section1:Button("Nice Button",function()
 end)
 
 section1:Toggle("Nice Toggle 1",false,function(state)
-    print(state)
+    lib:Notify("Notification",state,3)
 end)
 
 section1:Toggle("Nice Toggle 2",true,function(state)
