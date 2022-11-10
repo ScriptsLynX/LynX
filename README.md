@@ -23,14 +23,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsLynX/LynX/main
 * Collect All Mushrooms/Meteorites
 * Cooking different dishes in 1 click
 
-### [SCP rBreach](https://www.roblox.com/games/2622527242/SCP-rBreach)
-* Item Picker
-* Inf Capacity
-* Unlock Camera
-* Disable Tesla Gates
-* Fast Escape
-* ESP: Boxes, Lines, Names
-
 ### [Roblox Titanic](https://www.roblox.com/games/294790062/Roblox-Titanic)
 * Points AutoFarm
 * 4x Risk
